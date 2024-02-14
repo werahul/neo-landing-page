@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/aileron');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  background-color: #17131e;
+}
+
+
+
+.background{
+  background: url("./assets/images/radial-gradient.svg");
+  background-size: cover;
+}
+
+@media (max-width: 768px){
+  .background{
+    background: url("./assets/images/backgroundMobile.svg");
+    background-size: cover;
+   
+  }
+}
+
+@font-face {
+  font-family: 'Aileron';
+  src: url('./assets/fonts/Aileron-Font/Aileron-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.max-container {
+  @apply mx-auto max-w-[1440px];
+}
+
+.padding-container {
+  @apply px-6 lg:px-[100px] 3xl:px-0;
+}
+.padding-container2 {
+  @apply px-6 lg:px-[80px] 3xl:px-0;
+}
+.padding-container3 {
+  @apply px-6 lg:pl-[40px] lg:pr-[27px] 3xl:px-0;
+}
+.padding-container3 {
+  @apply px-6 lg:pl-[21px] lg:pr-[27px] 3xl:px-0;
+}
+
+.flexCenter {
+  @apply flex items-center justify-center;
+}
+
+.flexBetween {
+  @apply flex items-center justify-between;
+}
+
+.flexStart {
+  @apply flex items-center justify-start;
+}
+
+
+.flexOne{
+  @apply flex items-start justify-between;
+}
+.flexTwo{
+  @apply flex items-start justify-start;
+}
+
+.flexEnd {
+  @apply flex items-center justify-end;
+}
+
+
+
+
+/* .continuous-scroll {
+  display: flex;
+  overflow: hidden;
+  animation: scroll 20s linear infinite; /* Adjust duration as needed */
+
+
+
+.marquee{
+  display: flex;
+  margin: 0 auto;
+  width: 1150px;
+  overflow: hidden;
+  user-select: none;
+}
+.marquee2{
+  display: flex;
+  margin: 0 auto;
+  width: 1150px;
+  overflow: hidden;
+  user-select: none;
+}
+
+@media (max-width: 768px){
+  .wrapper{
+   padding:  20px 110px;
+
+  }
+
+  .marquee{
+    width: 90%;
+    margin-right: 5%;
+  }
+  .marquee2{
+    width: 90%;
+    margin-right: 5%;
+  }
+
+  .marqueeGroup{
+    flex-shrink: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+
+    width:1%;
+    
+    justify-content: start;
+    /* animation: scrollX 15s linear infinite; */
+  
+  }
+
+
+  .marqueeGroup2{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    width: 0%;
+    justify-content: center;
+    /* animation: scrollX 10s linear infinite; */
+  
+  }
+  
+
+  .marqueeGroup3{
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* white-space: nowrap; */
+    width: 10%;
+    justify-content: space-around;
+    animation: scrollX 25s linear infinite;
+  }
+
+
+
+  .imageGroup1 {
+    width: 100%; 
+    padding: 0px; 
+    margin-right: -20px;
+  }
+
+
+  .imageGroup2 {
+    /* width: 100%;   */
+    width: 100%; 
+    padding: 0px; 
+    margin-right: -20px;
+    /* margin: 0 -30px; */
+  }
+  .imageGroup3 {
+    width: 100%; 
+   
+  }
+
+
+
+
+
+  .imaGe {
+    width: 200%;
+   
+  }
+  .imaGe2 {
+    width: 10px;
+    padding: 3px 0;
+    margin-right: 0px;
+    }
+  
+  .imaGe3 {
+    aspect-ratio: unset; 
+    height: auto; 
+  }
+  
+  .largerImage {
+    width: 100px; 
+    height: auto; 
+  }
+
+
+
+}
+
+
+.marqueeGroup{
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  width: max-content;
+  justify-content: start;
+  animation: scrollX 25s linear infinite;
+
+}
+
+.imageGroup1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 48px;
+}
+
+
+.imageGroup2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -20px;
+}
+
+.imaGe{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  aspect-ratio: 16/9;
+}
+.imaGe3{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  aspect-ratio: 1/1;
+}
+
+
+
+@keyframes scrollX {
+  from {
+    left: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+  
+}
+
+
+.footBg{
+  background: linear-gradient(89.99deg, rgba(51, 214, 173 , 0.52) 0.01%, rgba(19, 22, 35, 0) 99.98%);
+  backdrop-filter: blur(10px);
+}
+
+
+
+
+/* Add this to your CSS or styling solution */
+.navigation-dots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000; /* Adjust the color as needed */
+  margin: 0 5px; /* Adjust the margin as needed */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+}
+
+.active-dot {
+  background-color: #fff; /* Adjust the color as needed */
+  height: 30px;
+}
+
+/* ScrollLoader.css */
+
+@keyframes fillTeal {
+  from {
+    background-size: 0% ;
+    background-color: turquoise;
+  }
+  to {
+    background-size: 100%;
+    background-color: turquoise;
+  }
+}
+
+.scrolling {
+  animation: fillTeal 1s ease-in-out;
+}
+
+
+
+
+
+
+.opening-dot {
+  animation: openDot 0.6s ease-in-out;
+}
+
+@keyframes openDot {
+  0% {
+    transform: scaleY(0);
+    transform-origin: center top;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: center top;
+  }
+}
+
+@keyframes fillColor {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.glow {
+  color: #33D6AD;
+  text-shadow: 1px 1px 2px #33D6AD, 0 0 0 #33D6AD, 0 0 0.2em #33D6AD;
+}
+
+.boxBg{
+  background: linear-gradient(180deg, rgba(151, 49, 132, 0.352) 0%, rgba(19, 22, 35, 0) 100%);
+/* linear-gradient(0deg, rgba(219, 219, 219, 0.2), rgba(219, 219, 219, 0.2)); */
+
+}
